@@ -14,7 +14,6 @@ async function getAPicture() {
   try {
     let response = await fetch("https://dog.ceo/api/breeds/image/random");
     let dogURL = await response.json();
-    console.log(dogURL);
     image.src = dogURL.message;
     list.appendChild(image);
     element.appendChild(list);
